@@ -112,11 +112,10 @@ def save_to_txt(grouped_streams, filename="final_streams.txt"):
                 ipv6_lines.append(f"{program_name},{url}")
 
     with open(filepath, 'w', encoding='utf-8') as output_file:
-        output_file.write("# IPv4 Streams\n")
+        output_file.write("IPv4,#genre#\n")
         output_file.write("\n".join(ipv4_lines))
-        output_file.write("\n\n# IPv6 Streams\n")
+        output_file.write("\n\nIPv6,#genre#\n")
         output_file.write("\n".join(ipv6_lines))
-
     print(f"所有源已保存到 {filepath}")
 
 if __name__ == "__main__":
